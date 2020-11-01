@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #333;
+}
+ul {
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 200px auto;
+}
+ul::after {
+  position: absolute;
+  content: '心跳';
+  top: -150%;
+  left: 50%;
+  font-size: 40px;
+  font-weight: 700;
+  color: #974193;
+  transform: translateX(-50%);
+}
+li {
+  list-style: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 0 5px;
+}
+ul li:nth-child(1) {
+  background-color: red;
+  animation: line1 5s infinite;
+}
+ul li:nth-child(2) {
+  background-color: purple;
+  animation: line2 5s 0.2s infinite;
+}
+ul li:nth-child(3) {
+  background-color: skyblue;
+  animation: line3 5s 0.4s infinite;
+}
+ul li:nth-child(4) {
+  background-color: #fecede;
+  animation: line4 5s 0.6s infinite;
+}
+ul li:nth-child(5) {
+  background-color: #f9ed30;
+  animation: line5 5s 0.8s infinite;
+}
+ul li:nth-child(6) {
+  background-color: #9d8d6c;
+  animation: line4 5s 1s infinite;
+}
+ul li:nth-child(7) {
+  background-color: #ee5fec;
+  animation: line3 5s 1.2s infinite;
+}
+ul li:nth-child(8) {
+  background-color: #c96d4a;
+  animation: line2 5s 1.4s infinite;
+}
+ul li:nth-child(9) {
+  background-color: #6d97ab;
+  animation: line1 5s 1.6s infinite;
+}
+@keyframes line1 {
+  30%,
+  50% {
+    height: 60px;
+    transform: translateY(-30px);
+  }
+  70%,
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes line2 {
+  30%,
+  50% {
+    height: 120px;
+    transform: translateY(-30px);
+  }
+  80%,
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes line3 {
+  30%,
+  50% {
+    height: 160px;
+    transform: translateY(-35px);
+  }
+  80%,
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes line4 {
+  30%,
+  50% {
+    height: 190px;
+    transform: translateY(-10px);
+  }
+  80%,
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes line5 {
+  30%,
+  50% {
+    height: 195px;
+    transform: translateY(5px);
+  }
+  80%,
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}

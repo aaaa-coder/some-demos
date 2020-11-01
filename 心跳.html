@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+        给body设置弹性盒子，让爱心居中
+         */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+        }
+
+        /* 
+        旋转45°，让盒子立起来
+         */
+        .love {
+            transform: rotate(45deg);
+            animation: beat 2s infinite linear forwards;
+        }
+
+        /* 
+        浮动后方便布局
+         */
+        .cir1,
+        .cir2 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 100%;
+        }
+
+        /* 
+        微调爱心
+         */
+        .cir2 {
+            position: relative;
+            bottom: 45px;
+            right: 58px;
+        }
+
+        /* 
+        调整爱心底部的位置
+         */
+        .square {
+            position: relative;
+            float: left;
+            top: 0;
+            right: 158px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        /* 
+        制作一个跳动的动画
+         */
+        @keyframes beat {
+            50% {
+                transform: scale(1.2) rotate(45deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="love">
+        <div class="cir1"></div>
+        <div class="cir2"></div>
+        <div class="square"></div>
+    </div>
+
+</body>
+
+</html>
